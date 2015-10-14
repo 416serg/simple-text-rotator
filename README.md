@@ -1,4 +1,5 @@
 #Super Simple Text Rotator by Pete R (Wrapped for Meteor by Sergiy)
+
 A light weight jQuery plugin that will allow you to add a super simple rotating text to your website with little to no markup
 Created by [Pete R.](http://www.thepetedesign.com), Founder of [BucketListly](http://www.bucketlistly.com)
 
@@ -17,12 +18,15 @@ Super <span class="rotate">Simple, Customizable, Light Weight, Easy</span> Text 
 Put every rotating words inside the `<span class="rotate"></span>` and separate it with a comma and the script will automatically cycle through each words in order.
 
 ````javascript
-$(".rotate").textrotator({
-  animation: "dissolve", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
-  separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
-  speed: 2000 // How many milliseconds until the next word show.
-});
+Template.myTemplate.onRendered(function() {
+	$(".rotate").textrotator({
+	  animation: "dissolve", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
+	  separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
+	  speed: 2000 // How many milliseconds until the next word show.
+	});
+}); 
 ````
+
 ## Other Resources
 - Tests (Coming Soon)
 - Tutorial (Coming Soon)
